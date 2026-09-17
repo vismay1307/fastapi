@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-
+from fastapi import Request
 app = FastAPI(
     title="Swiggy Orders",
     description="API For Managing Orders",
@@ -28,7 +28,7 @@ def about():
         "version": "1.1.1"
     }
 
-@app.get("/orders")
+@app.get("/orders",description="LIST ORDERS1")
 def orders():
     """LIST ORDERS"""
     return {
@@ -45,4 +45,28 @@ def orders():
                             "name":"Mutton Biryani",
                             "status":"ON WAY"}
         ]
+    }
+
+@app.get("/debug/request-info")
+async def request_info(request:Request):
+    """Inspect The Raw Request Object"""
+    return{
+        "method":request.method,
+        "url":str(request.url),
+        "headers":dict(request.headers),
+        "path_params":request.path_params,
+        "query_params":dict(request.query_params),
+    }
+
+@app.get("/orders/get-active",
+    summary="Get Active Orders",
+    description=(
+        "Return All Orders That Are Being Prepared"
+    ),
+    tags=["orders"],
+    response_description="List Of All Active Orders"
+)
+def getactive():
+    return{
+        "Status":"Testing Successfull"
     }
