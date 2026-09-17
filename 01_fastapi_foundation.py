@@ -27,3 +27,22 @@ def about():
         "region": "Ahmedabad",
         "version": "1.1.1"
     }
+
+@app.get("/orders")
+def orders():
+    """LIST ORDERS"""
+    return {
+        "orders":[
+            {
+                "id":1,
+                "name":"Butter Chicken",
+                "status":"Delivered"
+            },
+            {"id":2,
+                            "name":"Butter Masala Dosa",
+                            "status":"Preparing"},
+            {"id":3,
+                            "name":"Mutton Biryani",
+                            "status":"ON WAY"}
+        ]
+    }
