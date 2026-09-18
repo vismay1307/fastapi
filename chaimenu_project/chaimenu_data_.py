@@ -4,7 +4,7 @@ menu_items = [
         "name": "Masala Chai",
         "price": 40,
         "description": "Classic Indian masala chai",
-        "category": "Milk Tea",
+        "category": "MilkTea",
         "available": True
     },
     {
@@ -12,7 +12,7 @@ menu_items = [
         "name": "Adrak Chai",
         "price": 35,
         "description": "Refreshing tea infused with fresh ginger",
-        "category": "Milk Tea",
+        "category": "MilkTea",
         "available": True
     },
     {
@@ -20,7 +20,7 @@ menu_items = [
         "name": "Elaichi Chai",
         "price": 40,
         "description": "Aromatic tea flavored with cardamom",
-        "category": "Milk Tea",
+        "category": "MilkTea",
         "available": True
     },
     {
@@ -28,7 +28,7 @@ menu_items = [
         "name": "Cutting Chai",
         "price": 25,
         "description": "Strong and flavorful half-cup Indian tea",
-        "category": "Milk Tea",
+        "category": "MilkTea",
         "available": True
     },
     {
@@ -36,7 +36,7 @@ menu_items = [
         "name": "Irani Chai",
         "price": 50,
         "description": "Rich and creamy traditional Irani-style tea",
-        "category": "Special Tea",
+        "category": "SpecialTea",
         "available": True
     },
     {
@@ -44,7 +44,7 @@ menu_items = [
         "name": "Kesar Chai",
         "price": 60,
         "description": "Premium tea infused with saffron",
-        "category": "Special Tea",
+        "category": "SpecialTea",
         "available": True
     },
     {
@@ -52,7 +52,7 @@ menu_items = [
         "name": "Lemon Tea",
         "price": 35,
         "description": "Light and refreshing tea with fresh lemon",
-        "category": "Black Tea",
+        "category": "BlackTea",
         "available": True
     },
     {
@@ -60,7 +60,7 @@ menu_items = [
         "name": "Green Tea",
         "price": 45,
         "description": "Healthy and refreshing green tea",
-        "category": "Green Tea",
+        "category": "GreenTea",
         "available": True
     },
     {
@@ -68,7 +68,7 @@ menu_items = [
         "name": "Black Tea",
         "price": 30,
         "description": "Strong black tea served without milk",
-        "category": "Black Tea",
+        "category": "BlackTea",
         "available": True
     },
     {
@@ -76,7 +76,7 @@ menu_items = [
         "name": "Tandoori Chai",
         "price": 70,
         "description": "Smoky and flavorful tea served in a clay cup",
-        "category": "Special Tea",
+        "category": "SpecialTea",
         "available": False
     }
 ]

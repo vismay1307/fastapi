@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+
 class MenuItems(BaseModel):
     id:int
     name:str
