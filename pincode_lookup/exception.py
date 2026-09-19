@@ -12,7 +12,7 @@ class InvalidPincodeError(Exception):
 
 async def pincode_not_found_handler(req:Request,exc:PincodeNotFoundError):
     return JSONResponse(
-        status_code="404",
+        status_code=404,
         content={
             "error":"Pincode Not Found",
             "message":f"Pincode Not Found For This {exc.pincode}",
@@ -22,7 +22,7 @@ async def pincode_not_found_handler(req:Request,exc:PincodeNotFoundError):
 
 async def invalid_pincode_error_handler(req:Request,exc:InvalidPincodeError):
     return JSONResponse(
-        status_code="400",
+        status_code=400,
         content={
             "error":"Invalid Pincode",
             "message":f"Invalid Pincode For This {exc.pincode}",

@@ -17,9 +17,9 @@ class LocationResponse(BaseModel):
     district:str
 
 class BulkReq(BaseModel):
-    pincodes=list[str]
+    pincodes:list[str]
 
-    @field_validator
+    @field_validator("pincodes")
     @classmethod
     def validatePincodes(cls,val):
         if len(val)==0:
@@ -27,13 +27,13 @@ class BulkReq(BaseModel):
         if len(val)>20:
              raise ValueError("MAX 20")
         for code in val:
-            if len(code)!=6 or not code.isDigit():
+            if len(code)!=6 or not code.isdigit():
                         raise ValueError("Each Pincode Must Be Exactly 6 Digits")
         return val
 
 class BulkResponse(BaseModel):
-    status:str="Success"
-    found:int
-    not_found:int
-    results:list[LocationResponse]
-    missing:str
+    status: str = "Success"
+    found: int
+    not_found: int
+    results: list[LocationResponse]
+    missing: list[str]
